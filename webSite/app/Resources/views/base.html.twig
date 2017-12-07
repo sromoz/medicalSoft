@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         <!-- Meta, title, CSS, favicons, etc. -->
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>{% block title %}MedicalSoft{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link href="{{asset('public/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css"/>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+          <link href="{{asset('public/css/nprogress.css')}}" rel="stylesheet" type="text/css"/>
+        <link href="{{asset('public/css/animate.min.css')}}" rel="stylesheet" type="text/css"/>
+        <link href="{{asset('public/css/custom.min.css')}}" rel="stylesheet" type="text/css"/>
+        <link href="{{asset('public/css/aero.css')}}" rel="stylesheet" type="text/css"/>
+        <link href="{{asset('public/css/bootstrap-progressbar-3.3.4.min.css')}}" rel="stylesheet" type="text/css"/>         
+        <link href="{{asset('public/css/daterangepicker.css')}}" rel="stylesheet" type="text/css"/>   
+        <link href="{{asset('public/css/pnotify.css')}}" rel="stylesheet" type="text/css"/>   
+        <link href="{{asset('public/css/pnotify.buttons.css')}}" rel="stylesheet" type="text/css"/>   
+        <link href="{{asset('public/css/pnotify.nonblock.css')}}" rel="stylesheet" type="text/css"/>   
+
+    </head>
+    {% if app.session.started %}
+                {% for flashMessage in app.session.flashbag.get('usuario') %}
+                               
+           
+           {# new PNotify({
+             title: {{ flashMessage.titulo }},
+             text: {{ flashMessage.mensaje}},
+                styling:'bootstrap3'
+         });#}
+         
+            
+            {#<div class="alert alert-{{ flashMessage.alerta }} alert-dismissible" role="alert">
+                <h4 class="alert-heading">Registro de Usuario!</h4>
+                <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                </button>
+                    </span><strong>{{ flashMessage.titulo }}</strong> {{ flashMessage.mensaje}}
+            </div>#}
+           {% endfor %}
+    {% endif %}    
+
+    {% block content %}
+         
+        {% endblock %}   
+        
+       
+         {% block javascripts %}
+         
+         {% endblock %}
+
+</html>

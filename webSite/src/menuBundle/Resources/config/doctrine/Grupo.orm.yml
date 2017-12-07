@@ -1,0 +1,11 @@
+menuBundle\Entity\Grupo:
+    type: entity
+    table: null
+    repositoryClass: menuBundle\Repository\GrupoRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }

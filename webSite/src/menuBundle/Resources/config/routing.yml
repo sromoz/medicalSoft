@@ -1,0 +1,8 @@
+menu_homepage:
+    path:     /inicio
+    defaults: { _controller: menuBundle:Default:index }
+fos_user_registration_register:    
+    path:     /register
+    defaults: { _controller: FOSUserBundle:Default:register }
+    
+

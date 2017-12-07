@@ -1,0 +1,15 @@
+menuBundle\Entity\User:
+    type: entity
+    table: null
+    repositoryClass: menuBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO        
+    first_name:
+        type: string
+    last_name:
+        type: string
+    lifecycleCallbacks: {  }
