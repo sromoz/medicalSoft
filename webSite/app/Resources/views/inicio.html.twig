@@ -248,6 +248,7 @@
         <!-- page content -->
         <div class="right_col" role="main">
                 
+            
             {% block content1 %}
                    
             {% endblock %}
@@ -313,11 +314,12 @@
     <script src="{{asset('public/js/pnotify.js')}}"></script>
     <script src="{{asset('public/js/pnotify.nonblock.js')}}"></script>
     <script src="{{asset('public/js/pnotify.buttons.js')}}"></script>
-    <script>
+    
+    {#<script>
         $(document).ready(function (){
-           $('.ui-pnotify').remove();
+           $('.ui-pnotify')remove();
         });
-    </script>
+    </script>#}
     <script>
             $(document).ready(function(){
             $("#mytable #checkall").click(function () {
